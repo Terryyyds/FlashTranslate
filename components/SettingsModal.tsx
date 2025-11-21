@@ -168,7 +168,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({
             </div>
             <p className="text-xs text-slate-500 leading-relaxed">
               {(!apiKey && provider === 'claude') 
-                ? `Using system key and default endpoint (${SYSTEM_BASE_URL}). Leave blank to keep using the built-in credentials.` 
+                ? `Leave blank to keep using the built-in credentials.` 
                 : !apiKey
                   ? "No key provided. Enter your own API key for this provider."
                   : "Your API key is stored locally in your browser and sent directly to the chosen provider/endpoint."}

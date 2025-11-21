@@ -188,7 +188,7 @@ async function translateWithGemini(text: string, targetLanguage: string, apiKey:
 
 async function translateWithOpenAI(text: string, targetLanguage: string, apiKey: string, baseUrl?: string): Promise<TranslationResult> {
   const userKey = (apiKey || "").trim();
-  const key = resolveApiKey(userKey);
+  const key = resolveApiKey('openai', userKey);
   if (!key) {
     throw new Error("OpenAI API Key is missing.");
   }
@@ -238,7 +238,7 @@ async function translateWithOpenAI(text: string, targetLanguage: string, apiKey:
 
 async function translateWithClaude(text: string, targetLanguage: string, apiKey: string, baseUrl?: string): Promise<TranslationResult> {
   const userKey = (apiKey || "").trim();
-  const key = resolveApiKey(userKey);
+  const key = resolveApiKey('claude', userKey);
   if (!key) {
     throw new Error("Claude API Key is missing.");
   }
